@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{QAUrl}}API:/User?page=2#"
+method: GET
+queryParams:
+  page: "2"
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Test Status\", function(){\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"verify User email address\", function(){\r
+
+      \    const jsonData = pm.response.json();\r
+
+      \    pm.expect(jsonData.data[0].email)==('michael.lawson@reqres.in');\r
+
+      });"
+    language: text/javascript
+order: 2000

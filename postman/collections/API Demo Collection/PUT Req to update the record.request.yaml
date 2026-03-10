@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{QAUrl}}api/users/147"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \       \"job\": \"Test Manager Updated 1\" \r
+
+    }"
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Test Status\", function(){\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });"
+    language: text/javascript
+order: 6000

@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{QAUrl}}api/users/2"
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code should be 200\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Response time is less than 200ms\",function(){\r
+
+      \    pm.expect(pm.response.responseTime).to.be.below(200);\r
+
+      });\r
+
+      \r\n"
+    language: text/javascript
+order: 1000

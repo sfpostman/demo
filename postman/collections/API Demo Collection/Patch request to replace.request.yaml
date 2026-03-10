@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{QAUrl}}api/users/147"
+method: PATCH
+body:
+  type: json
+  content: '{ "op": "replace", "path": "/name", "value": "Jamal Ahmed" } '
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Test Status\", function(){\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });"
+    language: text/javascript
+order: 7000
