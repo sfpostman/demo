@@ -20,4 +20,4 @@ auth:
     value: "{{apiKey}}"
     in: header
 examples: ./.resources/Add a book.resources/examples
-order: 3000
+order: 4000
