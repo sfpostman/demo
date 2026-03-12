@@ -10,5 +10,4 @@ cloudResources:
   specs: {}
 
 localResources:
-  specs:
-    - ../docsspec.yaml
+  specs: []
