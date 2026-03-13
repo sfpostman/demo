@@ -9,6 +9,7 @@ cloudResources:
     ../postman/collections/API Demo Collection: 51415495-f89d9242-0d37-4f45-bc88-9b7f2fc0d41d
   specs:
     ../postman/specs/nasa.yaml: 2627fc14-02c7-42d9-8ec0-3298a88d6083
+    ../postman/specs/docsspec.yaml: 92cb7ee7-ec8b-44de-839b-e5677eb55170
 
 localResources:
   specs: []
