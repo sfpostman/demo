@@ -1,0 +1,10 @@
+$kind: collection
+name: "Scenario: Happy Path"
+auth:
+  - id: bb9b609f-3dc8-4540-b806-300b311dab7d
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: "{{libraryApiKey}}"
+      key: api-key
+order: 1000
