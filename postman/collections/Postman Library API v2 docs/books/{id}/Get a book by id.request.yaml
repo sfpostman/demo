@@ -1,0 +1,54 @@
+$kind: http-request
+url: "{{baseUrl}}:/books/:id#"
+method: GET
+headers:
+  Accept: application/json
+pathVariables:
+  - key: id
+    value: 29cd820f-82f9-4b45-a7f4-0924111b5b89
+    description: (Required) the id of a book
+scripts:
+  - type: afterResponse
+    code: >-
+      pm.test('Status code is 200', function () {
+          pm.response.to.have.status(200);
+      })
+
+
+      pm.test('Response time is acceptable', function () {
+          pm.expect(pm.response.responseTime).to.be.below(2000);
+      })
+
+
+      pm.test('Response is an object', function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.be.an('object');
+      })
+
+
+      pm.test('Book has all required properties', function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property('id');
+          pm.expect(jsonData).to.have.property('title');
+          pm.expect(jsonData).to.have.property('author');
+          pm.expect(jsonData).to.have.property('genre');
+          pm.expect(jsonData).to.have.property('checkedOut');
+      })
+
+
+      pm.test('Book properties have correct data types', function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData.id).to.be.a('number');
+          pm.expect(jsonData.title).to.be.a('string');
+          pm.expect(jsonData.author).to.be.a('string');
+          pm.expect(jsonData.genre).to.be.a('string');
+          pm.expect(jsonData.checkedOut).to.be.a('boolean');
+      })
+
+
+      pm.test('Content-Type header is application/json', function () {
+          pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');
+      })
+    language: text/javascript
+examples: ./.resources/Get a book by id.resources/examples
+order: 1000

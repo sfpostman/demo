@@ -1,0 +1,23 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users/users/:userId"
+  method: GET
+  pathVariables:
+    - key: userId
+      value: <integer>
+      description: The ID of the user
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john@example.com",
+        "role": "user"
+      }
+order: 1000

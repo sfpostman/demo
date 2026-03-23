@@ -1,0 +1,15 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users/users/:userId"
+  method: GET
+  pathVariables:
+    - key: userId
+      value: <integer>
+      description: The ID of the user
+response:
+  statusCode: 404
+  statusText: Not Found
+  body:
+    type: text
+    content: ""
+order: 2000

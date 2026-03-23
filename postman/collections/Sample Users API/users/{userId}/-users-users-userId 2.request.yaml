@@ -1,0 +1,10 @@
+$kind: http-request
+name: /users/users/:userId
+url: "{{baseUrl}}/users/users/:userId"
+method: DELETE
+pathVariables:
+  - key: userId
+    value: <integer>
+    description: The ID of the user
+examples: ./.resources/-users-users-userId 2.resources/examples
+order: 3000

@@ -1,0 +1,13 @@
+$kind: http-request
+name: /users
+url: "{{baseUrl}}/users?page&per_page"
+method: GET
+queryParams:
+  - key: page
+    value: "1"
+    description: Page number (starting from 1)
+  - key: per_page
+    value: "25"
+    description: Items per page
+examples: ./.resources/-users.resources/examples
+order: 2000

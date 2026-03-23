@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "book_e2e_workflow_sdk"
+version = "1.0.0"
+description = """# 🤝 Authorization Flow\n\n<img src=\"https://content.pstmn.io/874faa43-1838-4e73-b3e6-35e0d30911dc/MV9uaGVmWnRKdFAzX0xoTUtMdWVVek1nLmdpZg==\">\n\n# 🚀 API Flow\n\n<img src=\"https://content.pstmn.io/94d8b05a-57fe-4bd7-8b5c-2a1bc787e67b/aW1hZ2UucG5n\" width=\"1663\" height=\"1118\">\n\n# ⚠️ Common Gotchas\n\n- Use a valid XYZ\n    \n- Beware of ABC\n    \n\n# Required file:\n\n- [CSV file](https://docs.google.com/spreadsheets/d/1JKilNNN0Ts5tWJf6ae_HKUY9x7Bwx3CiLPJ0G4C9Ik8/edit?usp=sharing)\n    \n\nContact Support:  \nName: Ronak  \nEmail: [admin@admin.com](https://mailto:admin@admin.com)"""
+readme = "PyPI_README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic>=2.0.0,<3.0.0"
+]

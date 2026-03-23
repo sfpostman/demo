@@ -1,0 +1,24 @@
+{
+  "endpoints": {
+    "/users/2": {
+      "get": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.users.get_request_with_singel_user()\n\nprint(result)\n"
+    },
+    "/users": {
+      "post": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\nfrom api_demo_collection_sdk.models import PostReqToAddUserRequest\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nrequest_body = PostReqToAddUserRequest(\n    name=\"Jamal\",\n    job=\"Test Manager\"\n)\n\nresult = sdk.users.post_req_to_add_user(request_body=request_body)\n\nprint(result)\n"
+    },
+    "/users/147": {
+      "put": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\nfrom api_demo_collection_sdk.models import PutReqToUpdateTheRecordRequest\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nrequest_body = PutReqToUpdateTheRecordRequest(\n    job=\"Test Manager Updated 1\"\n)\n\nresult = sdk.users.put_req_to_update_the_record(request_body=request_body)\n\nprint(result)\n",
+      "patch": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\nfrom api_demo_collection_sdk.models import PatchRequestToReplaceRequest\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nrequest_body = PatchRequestToReplaceRequest(\n    op=\"replace\",\n    path=\"/name\",\n    value=\"Jamal Ahmed\"\n)\n\nresult = sdk.users.patch_request_to_replace(request_body=request_body)\n\nprint(result)\n"
+    },
+    "/User": {
+      "get": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.user.get_req_with_query_params(page=\"2\")\n\nprint(result)\n"
+    },
+    "/unknown": {
+      "get": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.unknown.get_list()\n\nprint(result)\n"
+    },
+    "/unknown/25": {
+      "get": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.unknown.get_notfound()\n\nprint(result)\n"
+    }
+  },
+  "example": "from api_demo_collection_sdk import ApiDemoCollectionSdk, Environment\n\nsdk = ApiDemoCollectionSdk(\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.users.get_request_with_singel_user()\n\nprint(result)\n"
+}

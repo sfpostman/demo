@@ -1,0 +1,17 @@
+$kind: collection
+description: |+
+  # Description
+
+
+
+  # Documentation
+
+  ## Overview
+
+  Small RAML 1.0 sample API for managing users. Demonstrates types, traits,
+  resourceTypes and a simple API key security scheme.
+
+
+variables:
+  version: v1
+  baseUrl: https://api.example.com/{{version}}

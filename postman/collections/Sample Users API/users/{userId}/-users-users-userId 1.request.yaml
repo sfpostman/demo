@@ -1,0 +1,19 @@
+$kind: http-request
+name: /users/users/:userId
+url: "{{baseUrl}}/users/users/:userId"
+method: PUT
+headers:
+  Content-Type: application/json
+pathVariables:
+  - key: userId
+    value: <integer>
+    description: The ID of the user
+body:
+  type: json
+  content: |-
+    {
+      "name": "Updated Name",
+      "email": "updated@example.com"
+    }
+examples: ./.resources/-users-users-userId 1.resources/examples
+order: 2000

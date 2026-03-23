@@ -1,0 +1,24 @@
+{
+  "endpoints": {
+    "/users/2": {
+      "get": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\n\npublic class Main {\n    public static void main(String[] args) {\n\t\tApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\t\tObject response = apiDemoCollectionSdk.users.getRequestWithSingelUser();\n\t\t\t\n\t\tSystem.out.println(response);\n    }\n}\n"
+    },
+    "/users": {
+      "post": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\nimport com.apidemocollectionsdk.models.PostReqToAddUserRequest;\n\npublic class Main {\n    public static void main(String[] args) {\n\t\tApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\t\tPostReqToAddUserRequest postReqToAddUserRequest = PostReqToAddUserRequest.builder()\n\t\t\t.name(\"Jamal\")\n\t\t\t.job(\"Test Manager\")\n\t\t\t.build();\n\n\t\tObject response = apiDemoCollectionSdk.users.postReqToAddUser(postReqToAddUserRequest);\n\t\t\t\n\t\tSystem.out.println(response);\n    }\n}\n"
+    },
+    "/users/147": {
+      "put": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\nimport com.apidemocollectionsdk.models.PutReqToUpdateTheRecordRequest;\n\npublic class Main {\n    public static void main(String[] args) {\n\t\tApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\t\tPutReqToUpdateTheRecordRequest putReqToUpdateTheRecordRequest = PutReqToUpdateTheRecordRequest.builder()\n\t\t\t.job(\"Test Manager Updated 1\")\n\t\t\t.build();\n\n\t\tObject response = apiDemoCollectionSdk.users.putReqToUpdateTheRecord(putReqToUpdateTheRecordRequest);\n\t\t\t\n\t\tSystem.out.println(response);\n    }\n}\n",
+      "patch": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\nimport com.apidemocollectionsdk.models.PatchRequestToReplaceRequest;\n\npublic class Main {\n    public static void main(String[] args) {\n\t\tApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\t\tPatchRequestToReplaceRequest patchRequestToReplaceRequest = PatchRequestToReplaceRequest.builder()\n\t\t\t.op(\"replace\")\n\t\t\t.path(\"/name\")\n\t\t\t.value(\"Jamal Ahmed\")\n\t\t\t.build();\n\n\t\tObject response = apiDemoCollectionSdk.users.patchRequestToReplace(patchRequestToReplaceRequest);\n\t\t\t\n\t\tSystem.out.println(response);\n    }\n}\n"
+    },
+    "/User": {
+      "get": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\nimport com.apidemocollectionsdk.models.GetReqWithQueryParamsParameters;\n\npublic class Main {\n    public static void main(String[] args) {\n\t\tApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\t\tGetReqWithQueryParamsParameters requestParameters = GetReqWithQueryParamsParameters.builder()\n\t\t\t.page(\"2\")\n\t\t\t.build();\n\n\t\tObject response = apiDemoCollectionSdk.user.getReqWithQueryParams(requestParameters);\n\t\t\t\n\t\tSystem.out.println(response);\n    }\n}\n"
+    },
+    "/unknown": {
+      "get": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\n\npublic class Main {\n    public static void main(String[] args) {\n\t\tApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\t\tObject response = apiDemoCollectionSdk.unknown.getList();\n\t\t\t\n\t\tSystem.out.println(response);\n    }\n}\n"
+    },
+    "/unknown/25": {
+      "get": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\n\npublic class Main {\n    public static void main(String[] args) {\n\t\tApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\t\tObject response = apiDemoCollectionSdk.unknown.getNotfound();\n\t\t\t\n\t\tSystem.out.println(response);\n    }\n}\n"
+    }
+  },
+  "example": "import com.apidemocollectionsdk.ApiDemoCollectionSdk;\nimport com.apidemocollectionsdk.exceptions.ApiError;\n  \npublic class Main {\n  public static void main(String[] args) {\n    ApiDemoCollectionSdk apiDemoCollectionSdk = new ApiDemoCollectionSdk();\n\n\n    try {\n      Object response = apiDemoCollectionSdk.users.getRequestWithSingelUser();\n        \n      System.out.println(response);\n    } catch (ApiError e) {\n      e.printStackTrace();\n    }\n\n    System.exit(0);\n  }\n}\n"
+}

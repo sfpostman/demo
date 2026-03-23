@@ -5,12 +5,19 @@ workspace:
 # Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
 cloudResources:
   collections:
+    ../postman/collections/Sample Users API: 51415495-ffab33d8-e2e6-4ab8-84bb-9aefe363919d
     ../postman/collections/Postman Library API v2 docs: 51415495-8c9291ab-90f7-419b-9e0a-cd41603b6502
-    ../postman/collections/API Demo Collection: 51415495-f89d9242-0d37-4f45-bc88-9b7f2fc0d41d
     ../postman/collections/Book E2E Workflow: 51415495-e06cc32e-7eed-41a7-a71d-b1f7da6001dc
+    ../postman/collections/API Demo Collection: 51415495-f89d9242-0d37-4f45-bc88-9b7f2fc0d41d
   specs:
     ../postman/specs/nasa.yaml: 2627fc14-02c7-42d9-8ec0-3298a88d6083
     ../postman/specs/docsspec.yaml: 92cb7ee7-ec8b-44de-839b-e5677eb55170
+    ../index.yaml: f483c59b-948c-42a8-aa46-cccbad5cfea1
+  environments:
+    ../postman/environments/CICD.environment.yaml: 51415495-c46b90fe-c489-4fb0-816e-4f1ed10b1472
 
 localResources:
-  specs: []
+  specs:
+    - ../index.yaml
+    - ../postman/specs/docsspec.yaml
+    - ../postman/specs/nasa.yaml

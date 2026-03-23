@@ -1,0 +1,49 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users?page&per_page"
+  method: GET
+  queryParams:
+    - key: page
+      value: null
+      description: Page number (starting from 1)
+    - key: per_page
+      value: null
+      description: Items per page
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "total": "<integer>",
+        "page": "<integer>",
+        "per_page": "<integer>",
+        "items": [
+          {
+            "id": "<integer>",
+            "name": "<string>",
+            "email": "<string>",
+            "role": "<string>",
+            "address": {
+              "street": "<string>",
+              "city": "<string>",
+              "zip": "<string>"
+            }
+          },
+          {
+            "id": "<integer>",
+            "name": "<string>",
+            "email": "<string>",
+            "role": "<string>",
+            "address": {
+              "street": "<string>",
+              "city": "<string>",
+              "zip": "<string>"
+            }
+          }
+        ]
+      }
+order: 1000

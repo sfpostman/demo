@@ -1,0 +1,13 @@
+{
+  "endpoints": {
+    "/books": {
+      "get": "import { BookE2eWorkflowSdk } from 'book-e2e-workflow-sdk';\n\n(async () => {\n  const bookE2eWorkflowSdk = new BookE2eWorkflowSdk({});\n\n  const data = await bookE2eWorkflowSdk.scenarioHappyPath.fetchAListOfBooks({\n      xMockResponseCode: \"500\",\n  });\n\n  console.log(data);\n})();\n",
+      "post": "import { BookE2eWorkflowSdk } from 'book-e2e-workflow-sdk';\n\n(async () => {\n  const bookE2eWorkflowSdk = new BookE2eWorkflowSdk({});\n\n  const data = await bookE2eWorkflowSdk.scenarioHappyPath.createANewBook({\n      xMockResponseCode: \"201\",\n      xMockResponseName: \"Dynamic Variables Mock Demo\",\n  });\n\n  console.log(data);\n})();\n"
+    },
+    "/books/{id}": {
+      "get": "import { BookE2eWorkflowSdk } from 'book-e2e-workflow-sdk';\n\n(async () => {\n  const bookE2eWorkflowSdk = new BookE2eWorkflowSdk({});\n\n  const data = await bookE2eWorkflowSdk.scenarioHappyPath.verifyBookIsCheckedOut(\n  \"id\",\n  {\n      xMockResponseCode: \"200\",\n  }\n);\n\n  console.log(data);\n})();\n",
+      "patch": "import { BookE2eWorkflowSdk } from 'book-e2e-workflow-sdk';\n\n(async () => {\n  const bookE2eWorkflowSdk = new BookE2eWorkflowSdk({});\n\n  const data = await bookE2eWorkflowSdk.scenarioHappyPath.checkoutNewBook(\n  \"id\",\n  {\n      xMockResponseCode: \"200\",\n  }\n);\n\n  console.log(data);\n})();\n"
+    }
+  },
+  "example": "import { BookE2eWorkflowSdk } from 'book-e2e-workflow-sdk';\n\n(async () => {\n  const bookE2eWorkflowSdk = new BookE2eWorkflowSdk({});\n\n  const data = await bookE2eWorkflowSdk.scenarioHappyPath.fetchAListOfBooks({\n      xMockResponseCode: \"500\",\n  });\n\n  console.log(data);\n})();\n"
+}

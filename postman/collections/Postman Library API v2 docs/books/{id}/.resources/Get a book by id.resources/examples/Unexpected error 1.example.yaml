@@ -1,0 +1,24 @@
+$kind: http-example
+name: Unexpected error
+request:
+  url: "{{baseUrl}}:/books/:id#"
+  method: GET
+  headers:
+    Accept: application/json
+  pathVariables:
+    - key: id
+      value: fugiat amet in aliquip Excepteur
+      description: (Required) the id of a book
+response:
+  statusCode: 500
+  statusText: Internal Server Error
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "status": "error",
+        "message": "something"
+      }
+order: 6000

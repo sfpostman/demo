@@ -1,0 +1,35 @@
+$kind: http-example
+name: Book not found
+request:
+  url: "{{baseUrl}}:/books/:id#"
+  method: PATCH
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Accept
+      value: application/json
+    - key: api-key
+      value: <API Key>
+      description: "Added as a part of security scheme: apikey"
+  pathVariables:
+    - key: id
+      value: fugiat amet in aliquip Excepteur
+      description: (Required) the id of a book
+  body:
+    type: json
+    content: |-
+      {
+        "checkedOut": true
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: >-
+      {
+        "message": "Book with id '29cd820f-82f9-4b45-a7f4-0924111b5b80' not found"
+      }
+order: 11000

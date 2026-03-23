@@ -1,0 +1,13 @@
+{
+  "endpoints": {
+    "/books": {
+      "get": "from book_e2e_workflow_sdk import BookE2eWorkflowSdk, Environment\n\nsdk = BookE2eWorkflowSdk(\n    api_key=\"YOUR_API_KEY\",\n    api_key_header=\"YOUR_API_KEY_HEADER\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.scenario_happy_path.fetch_a_list_of_books(x_mock_response_code=\"500\")\n\nprint(result)\n",
+      "post": "from book_e2e_workflow_sdk import BookE2eWorkflowSdk, Environment\n\nsdk = BookE2eWorkflowSdk(\n    api_key=\"YOUR_API_KEY\",\n    api_key_header=\"YOUR_API_KEY_HEADER\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.scenario_happy_path.create_a_new_book(\n    x_mock_response_code=\"201\",\n    x_mock_response_name=\"Dynamic Variables Mock Demo\"\n)\n\nprint(result)\n"
+    },
+    "/books/{id}": {
+      "get": "from book_e2e_workflow_sdk import BookE2eWorkflowSdk, Environment\n\nsdk = BookE2eWorkflowSdk(\n    api_key=\"YOUR_API_KEY\",\n    api_key_header=\"YOUR_API_KEY_HEADER\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.scenario_happy_path.verify_book_is_checked_out(\n    id_=\"id\",\n    x_mock_response_code=\"200\"\n)\n\nprint(result)\n",
+      "patch": "from book_e2e_workflow_sdk import BookE2eWorkflowSdk, Environment\n\nsdk = BookE2eWorkflowSdk(\n    api_key=\"YOUR_API_KEY\",\n    api_key_header=\"YOUR_API_KEY_HEADER\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.scenario_happy_path.checkout_new_book(\n    id_=\"id\",\n    x_mock_response_code=\"200\"\n)\n\nprint(result)\n"
+    }
+  },
+  "example": "from book_e2e_workflow_sdk import BookE2eWorkflowSdk, Environment\n\nsdk = BookE2eWorkflowSdk(\n    api_key=\"YOUR_API_KEY\",\n    api_key_header=\"YOUR_API_KEY_HEADER\",\n    base_url=Environment.DEFAULT.value,\n    timeout=10000\n)\n\nresult = sdk.scenario_happy_path.fetch_a_list_of_books(x_mock_response_code=\"500\")\n\nprint(result)\n"
+}

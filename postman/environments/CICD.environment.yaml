@@ -1,0 +1,6 @@
+name: CICD
+values:
+  - key: POSTMAN_API_KEY
+    value: ""
+    enabled: true
+color: null

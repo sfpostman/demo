@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users/users/:userId"
+  method: PUT
+  headers:
+    Content-Type: application/json
+  pathVariables:
+    - key: userId
+      value: <integer>
+      description: The ID of the user
+  body:
+    type: json
+    content: |-
+      {
+        "name": "Updated Name",
+        "email": "updated@example.com"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: |-
+      {
+        "id": "<integer>",
+        "name": "<string>",
+        "email": "<string>",
+        "role": "<string>",
+        "address": {
+          "street": "<string>",
+          "city": "<string>",
+          "zip": "<string>"
+        }
+      }
+order: 1000

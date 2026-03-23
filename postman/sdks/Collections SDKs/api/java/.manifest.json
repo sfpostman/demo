@@ -1,0 +1,159 @@
+{
+  "liblabVersion": "2.25.51",
+  "date": "2026-03-13T14:53:17.398Z",
+  "config": {
+    "languages": ["java"],
+    "deliveryMethods": ["zip"],
+    "languageOptions": {
+      "python": {
+        "alwaysInitializeOptionals": false,
+        "pypiPackageName": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "liblabVersion": "2"
+      },
+      "typescript": {
+        "bundle": true,
+        "exportClassDefault": false,
+        "httpClient": "fetch",
+        "npmName": "",
+        "npmOrg": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "liblabVersion": "2",
+        "generateEnumAs": "union"
+      },
+      "go": {
+        "goModuleName": "github.com/swagger-api/swagger-petstore",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "liblabVersion": "2"
+      },
+      "java": {
+        "groupId": "com",
+        "artifactId": "apidemocollectionsdk",
+        "ignoreFiles": [],
+        "liblabVersion": "2"
+      },
+      "csharp": {
+        "ignoreFiles": [],
+        "liblabVersion": "2",
+        "renameIllegalModelProperties": true,
+        "useOptionalWrapper": true,
+        "validateResponses": false
+      }
+    },
+    "includeWatermark": false,
+    "responseHeaders": false,
+    "sdkName": "api-demo-collection-sdk",
+    "sdkVersion": "1.0.0",
+    "groupId": "com",
+    "artifactId": "apidemocollectionsdk",
+    "ignoreFiles": [],
+    "liblabVersion": "2",
+    "language": "java",
+    "deliveryMethod": "zip",
+    "hooks": {
+      "enabled": false,
+      "sourceDir": ""
+    },
+    "usesFormData": false,
+    "authentication": {},
+    "environmentVariables": [],
+    "fileOutput": "/tmp",
+    "inferServiceNames": false,
+    "httpLibrary": {
+      "name": "axios",
+      "packages": {
+        "axios": "^1.13.2"
+      },
+      "languages": ["typescript"]
+    },
+    "auth": [],
+    "retry": {
+      "enabled": true,
+      "maxAttempts": 3,
+      "retryDelay": 150,
+      "maxDelay": 5000,
+      "retryDelayJitter": 50,
+      "backOffFactor": 2,
+      "httpMethodsToRetry": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
+    },
+    "multiTenant": false,
+    "customQueries": {
+      "paths": [],
+      "rawQueries": [],
+      "queriesData": []
+    },
+    "devContainer": false,
+    "ai": false,
+    "includeOptionalSnippetParameters": true,
+    "specType": "postman",
+    "deprecatedOperations": {
+      "include": true
+    },
+    "multipleResponses": {
+      "enabled": false
+    }
+  },
+  "files": [
+    "pom.xml",
+    ".gitignore",
+    "src/main/java/com/apidemocollectionsdk/validation/Violation.java",
+    "src/main/java/com/apidemocollectionsdk/validation/ViolationAggregator.java",
+    "src/main/java/com/apidemocollectionsdk/validation/validators/AbstractValidator.java",
+    "src/main/java/com/apidemocollectionsdk/validation/validators/ListValidator.java",
+    "src/main/java/com/apidemocollectionsdk/validation/validators/NumericValidator.java",
+    "src/main/java/com/apidemocollectionsdk/validation/validators/StringValidator.java",
+    "src/main/java/com/apidemocollectionsdk/validation/validators/Validator.java",
+    "src/main/java/com/apidemocollectionsdk/validation/validators/modelValidators/AbstractModelValidator.java",
+    "src/main/java/com/apidemocollectionsdk/validation/exceptions/ValidationException.java",
+    "src/main/java/com/apidemocollectionsdk/services/BaseService.java",
+    "src/main/java/com/apidemocollectionsdk/http/HttpMethod.java",
+    "src/main/java/com/apidemocollectionsdk/http/ModelConverter.java",
+    "src/main/java/com/apidemocollectionsdk/http/util/ContentTypes.java",
+    "src/main/java/com/apidemocollectionsdk/http/util/HttpArgumentConverter.java",
+    "src/main/java/com/apidemocollectionsdk/http/serialization/PathSerializationStyle.java",
+    "src/main/java/com/apidemocollectionsdk/http/serialization/QuerySerializationStyle.java",
+    "src/main/java/com/apidemocollectionsdk/http/serialization/SerializationStyle.java",
+    "src/main/java/com/apidemocollectionsdk/http/serialization/Serializer.java",
+    "src/main/java/com/apidemocollectionsdk/http/serialization/Util.java",
+    "src/main/java/com/apidemocollectionsdk/http/interceptors/DefaultHeadersInterceptor.java",
+    "src/main/java/com/apidemocollectionsdk/exceptions/ApiError.java",
+    "src/main/java/com/apidemocollectionsdk/http/Environment.java",
+    "src/main/java/com/apidemocollectionsdk/ApiDemoCollectionSdk.java",
+    "src/main/java/com/apidemocollectionsdk/http/interceptors/RetryInterceptor.java",
+    "src/main/java/com/apidemocollectionsdk/config/RetryConfig.java",
+    "src/main/java/com/apidemocollectionsdk/config/ApiDemoCollectionSdkConfig.java",
+    "src/main/java/com/apidemocollectionsdk/config/RequestConfig.java",
+    "documentation/snippets/snippets.json",
+    "documentation/models/PostReqToAddUserRequest.md",
+    "documentation/models/PutReqToUpdateTheRecordRequest.md",
+    "documentation/models/PatchRequestToReplaceRequest.md",
+    "documentation/models/GetReqWithQueryParamsParameters.md",
+    "src/main/java/com/apidemocollectionsdk/json/TypeUtils.java",
+    "examples/pom.xml",
+    "examples/run.sh",
+    "examples/src/main/java/com/example/Main.java",
+    "examples/.gitignore",
+    ".idea/workspace.xml",
+    ".idea/misc.xml",
+    ".idea/compiler.xml",
+    ".idea/encoding.xml",
+    ".idea/jarRepositories.xml",
+    "src/main/java/com/apidemocollectionsdk/http/util/RequestBuilder.java",
+    "examples/README.md",
+    ".env.example",
+    "documentation/services/UserService.md",
+    "src/main/java/com/apidemocollectionsdk/models/PutReqToUpdateTheRecordRequest.java",
+    "src/main/java/com/apidemocollectionsdk/models/GetReqWithQueryParamsParameters.java",
+    "documentation/services/UnknownService.md",
+    "src/main/java/com/apidemocollectionsdk/models/PostReqToAddUserRequest.java",
+    "src/main/java/com/apidemocollectionsdk/models/PatchRequestToReplaceRequest.java",
+    "documentation/services/UsersService.md",
+    "src/main/java/com/apidemocollectionsdk/services/UserService.java",
+    "src/main/java/com/apidemocollectionsdk/services/UnknownService.java",
+    "README.md",
+    "src/main/java/com/apidemocollectionsdk/services/UsersService.java"
+  ]
+}

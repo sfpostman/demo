@@ -1,0 +1,170 @@
+{
+  "liblabVersion": "2.25.51",
+  "date": "2026-03-13T14:53:17.356Z",
+  "config": {
+    "languages": ["python"],
+    "deliveryMethods": ["zip"],
+    "languageOptions": {
+      "python": {
+        "alwaysInitializeOptionals": false,
+        "pypiPackageName": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "liblabVersion": "2"
+      },
+      "typescript": {
+        "bundle": true,
+        "exportClassDefault": false,
+        "httpClient": "fetch",
+        "npmName": "",
+        "npmOrg": "",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "liblabVersion": "2",
+        "generateEnumAs": "union"
+      },
+      "go": {
+        "goModuleName": "github.com/swagger-api/swagger-petstore",
+        "githubRepoName": "",
+        "ignoreFiles": [],
+        "liblabVersion": "2"
+      },
+      "java": {
+        "groupId": "com",
+        "artifactId": "apidemocollectionsdk",
+        "ignoreFiles": [],
+        "liblabVersion": "2"
+      },
+      "csharp": {
+        "ignoreFiles": [],
+        "liblabVersion": "2",
+        "renameIllegalModelProperties": true,
+        "useOptionalWrapper": true,
+        "validateResponses": false
+      }
+    },
+    "includeWatermark": false,
+    "responseHeaders": false,
+    "sdkName": "api-demo-collection-sdk",
+    "sdkVersion": "1.0.0",
+    "alwaysInitializeOptionals": false,
+    "pypiPackageName": "",
+    "githubRepoName": "",
+    "ignoreFiles": [],
+    "liblabVersion": "2",
+    "language": "python",
+    "deliveryMethod": "zip",
+    "hooks": {
+      "enabled": false,
+      "sourceDir": ""
+    },
+    "usesFormData": false,
+    "authentication": {},
+    "environmentVariables": [],
+    "fileOutput": "/tmp",
+    "inferServiceNames": false,
+    "httpLibrary": {
+      "name": "axios",
+      "packages": {
+        "axios": "^1.13.2"
+      },
+      "languages": ["typescript"]
+    },
+    "auth": [],
+    "retry": {
+      "enabled": true,
+      "maxAttempts": 3,
+      "retryDelay": 150,
+      "maxDelay": 5000,
+      "retryDelayJitter": 50,
+      "backOffFactor": 2,
+      "httpMethodsToRetry": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
+    },
+    "multiTenant": false,
+    "customQueries": {
+      "paths": [],
+      "rawQueries": [],
+      "queriesData": []
+    },
+    "devContainer": false,
+    "ai": false,
+    "includeOptionalSnippetParameters": true,
+    "specType": "postman",
+    "deprecatedOperations": {
+      "include": true
+    },
+    "multipleResponses": {
+      "enabled": false
+    }
+  },
+  "files": [
+    "src/api_demo_collection_sdk/models/utils/base_model.py",
+    "src/api_demo_collection_sdk/models/utils/base_error.py",
+    "src/api_demo_collection_sdk/models/utils/json_map.py",
+    "src/api_demo_collection_sdk/models/__init__.py",
+    "src/api_demo_collection_sdk/services/__init__.py",
+    "src/api_demo_collection_sdk/services/utils/__init__.py",
+    "src/api_demo_collection_sdk/__init__.py",
+    "src/api_demo_collection_sdk/net/__init__.py",
+    "src/api_demo_collection_sdk/net/headers/__init__.py",
+    "src/api_demo_collection_sdk/net/transport/__init__.py",
+    "src/api_demo_collection_sdk/hooks/__init__.py",
+    "src/api_demo_collection_sdk/net/environment/__init__.py",
+    "src/api_demo_collection_sdk/net/request_chain/__init__.py",
+    "src/api_demo_collection_sdk/net/request_chain/handlers/__init__.py",
+    "src/api_demo_collection_sdk/models/utils/__init__.py",
+    "src/api_demo_collection_sdk/services/async_/__init__.py",
+    "src/api_demo_collection_sdk/services/async_/utils/__init__.py",
+    "src/api_demo_collection_sdk/net/transport/request.py",
+    "src/api_demo_collection_sdk/net/transport/response.py",
+    "src/api_demo_collection_sdk/net/transport/api_error.py",
+    "src/api_demo_collection_sdk/net/transport/request_error.py",
+    "src/api_demo_collection_sdk/sdk.py",
+    "src/api_demo_collection_sdk/net/transport/serializer.py",
+    "src/api_demo_collection_sdk/services/utils/validator.py",
+    "src/api_demo_collection_sdk/services/utils/base_service.py",
+    "pyproject.toml",
+    ".gitignore",
+    "src/api_demo_collection_sdk/models/utils/cast_models.py",
+    "src/api_demo_collection_sdk/net/transport/utils.py",
+    "src/api_demo_collection_sdk/hooks/hook.py",
+    "install.sh",
+    "install.cmd",
+    "examples/install.sh",
+    "examples/install.cmd",
+    "src/api_demo_collection_sdk/net/headers/base_header.py",
+    "src/api_demo_collection_sdk/net/environment/environment.py",
+    "src/api_demo_collection_sdk/net/request_chain/request_chain.py",
+    "src/api_demo_collection_sdk/net/request_chain/handlers/base_handler.py",
+    "src/api_demo_collection_sdk/net/request_chain/handlers/http_handler.py",
+    "src/api_demo_collection_sdk/net/request_chain/handlers/hook_handler.py",
+    "src/api_demo_collection_sdk/net/request_chain/handlers/retry_handler.py",
+    "examples/sample.py",
+    "src/api_demo_collection_sdk/services/utils/default_headers.py",
+    "documentation/snippets/snippets.json",
+    "documentation/models/PostReqToAddUserRequest.md",
+    "documentation/models/PutReqToUpdateTheRecordRequest.md",
+    "documentation/models/PatchRequestToReplaceRequest.md",
+    "src/api_demo_collection_sdk/models/utils/one_of_base_model.py",
+    "src/api_demo_collection_sdk/services/async_/utils/to_async.py",
+    "src/api_demo_collection_sdk/services/async_/users.py",
+    "src/api_demo_collection_sdk/services/async_/user.py",
+    "src/api_demo_collection_sdk/services/async_/unknown.py",
+    "src/api_demo_collection_sdk/sdk_async.py",
+    "src/api_demo_collection_sdk/models/utils/sentinel.py",
+    ".env.example",
+    "examples/.env.example",
+    "src/api_demo_collection_sdk/net/sdk_config.py",
+    "src/api_demo_collection_sdk/services/user.py",
+    "documentation/services/UserService.md",
+    "src/api_demo_collection_sdk/models/post_req_to_add_user_request.py",
+    "src/api_demo_collection_sdk/models/put_req_to_update_the_record_request.py",
+    "src/api_demo_collection_sdk/models/patch_request_to_replace_request.py",
+    "src/api_demo_collection_sdk/services/unknown.py",
+    "documentation/services/UnknownService.md",
+    "documentation/services/UsersService.md",
+    "src/api_demo_collection_sdk/services/users.py",
+    "README.md",
+    "PyPI_README.md"
+  ]
+}

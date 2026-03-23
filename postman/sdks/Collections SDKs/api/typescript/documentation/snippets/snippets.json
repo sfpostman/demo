@@ -1,0 +1,24 @@
+{
+  "endpoints": {
+    "/users/2": {
+      "get": "import { ApiDemoCollectionSdk } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  const data = await apiDemoCollectionSdk.users.getRequestWithSingelUser();\n\n  console.log(data);\n})();\n"
+    },
+    "/users": {
+      "post": "import { ApiDemoCollectionSdk, PostReqToAddUserRequest } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  \n  const postReqToAddUserRequest: PostReqToAddUserRequest = {\t\n    name: \"Jamal\",\n    job: \"Test Manager\"\n  };\n\n  const data = await apiDemoCollectionSdk.users.postReqToAddUser(postReqToAddUserRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/users/147": {
+      "put": "import { ApiDemoCollectionSdk, PutReqToUpdateTheRecordRequest } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  \n  const putReqToUpdateTheRecordRequest: PutReqToUpdateTheRecordRequest = {\t\n    job: \"Test Manager Updated 1\"\n  };\n\n  const data = await apiDemoCollectionSdk.users.putReqToUpdateTheRecord(putReqToUpdateTheRecordRequest);\n\n  console.log(data);\n})();\n",
+      "patch": "import { ApiDemoCollectionSdk, PatchRequestToReplaceRequest } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  \n  const patchRequestToReplaceRequest: PatchRequestToReplaceRequest = {\t\n    op: \"replace\",\n    path: \"/name\",\n    value: \"Jamal Ahmed\"\n  };\n\n  const data = await apiDemoCollectionSdk.users.patchRequestToReplace(patchRequestToReplaceRequest);\n\n  console.log(data);\n})();\n"
+    },
+    "/User": {
+      "get": "import { ApiDemoCollectionSdk } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  const data = await apiDemoCollectionSdk.user.getReqWithQueryParams({\n      page: \"2\",\n  });\n\n  console.log(data);\n})();\n"
+    },
+    "/unknown": {
+      "get": "import { ApiDemoCollectionSdk } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  const data = await apiDemoCollectionSdk.unknown.getList();\n\n  console.log(data);\n})();\n"
+    },
+    "/unknown/25": {
+      "get": "import { ApiDemoCollectionSdk } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  const data = await apiDemoCollectionSdk.unknown.getNotfound();\n\n  console.log(data);\n})();\n"
+    }
+  },
+  "example": "import { ApiDemoCollectionSdk } from 'api-demo-collection-sdk';\n\n(async () => {\n  const apiDemoCollectionSdk = new ApiDemoCollectionSdk({});\n\n  const data = await apiDemoCollectionSdk.users.getRequestWithSingelUser();\n\n  console.log(data);\n})();\n"
+}
